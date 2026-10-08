@@ -1,0 +1,26 @@
+# 🌿 EcoMind AI | Backend Dependencies
+# ------------------------------------------------------------------------------
+# 🚀 QUICK START:
+# Run the following command to install everything:
+# pip install -r requirements.txt
+# ------------------------------------------------------------------------------
+
+# [ Core Web Infrastructure ]
+# fastapi: The backbone of our API, providing high-performance routing
+fastapi==0.115.0
+
+# uvicorn: The lightning-fast ASGI server that powers the FastAPI app
+uvicorn==0.30.1
+
+# [ AI Connectivity Layer ]
+# requests: The bridge that connects the backend to the local Gemma 4B API
+requests==2.32.3
+
+# [ Data Integrity & Validation ]
+# pydantic: Ensures all AI requests and responses are structured correctly
+pydantic==2.8.2
+
+# ------------------------------------------------------------------------------
+# 🌍 Project: EcoMind AI - Sustainable Living Copilot
+# 🛠️ Tech Stack: Python | FastAPI | Gemma 4B Local LLM
+# ------------------------------------------------------------------------------
