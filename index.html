@@ -43,11 +43,16 @@
                 <button onclick="setMode('challenge', this)" class="tab-btn flex-1 py-2 text-sm font-medium rounded-xl transition-all duration-200 text-green-700 hover:bg-green-200">Eco-Challenge</button>
             </div>
 
+            <!-- Feature Hint -->
+            <div id="featureHint" class="text-center py-2 px-4 bg-white/30 rounded-xl text-xs text-green-600 font-medium border border-green-100">
+                Find a greener alternative to your daily products!
+            </div>
+
             <!-- Input Section -->
             <div class="space-y-4">
                 <div class="relative">
                     <input id="userInput" type="text"
-                           placeholder="What do you want to swap?"
+                           placeholder="e.g. Plastic water bottles"
                            class="w-full px-4 py-3 rounded-2xl border border-green-200 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all bg-white/50 placeholder-green-400">
                 </div>
                 <button onclick="askAI()"
@@ -93,19 +98,23 @@
             btn.classList.add('tab-active');
             btn.classList.remove('text-green-700', 'hover:bg-green-200');
 
-            // Update input placeholder
+            // Update Hint, Input and Button
             const input = document.getElementById('userInput');
             const btnText = document.getElementById('actionBtn');
+            const hint = document.getElementById('featureHint');
 
             if(mode === 'swap') {
-                input.placeholder = "What do you want to swap?";
+                hint.innerText = "Find a greener alternative to your daily products!";
+                input.placeholder = "e.g. Plastic water bottles";
                 input.style.display = "block";
                 btnText.innerText = "Greenify it!";
             } else if(mode === 'waste') {
-                input.placeholder = "What are you throwing away?";
+                hint.innerText = "Find out if it goes in Recycle, Compost, or Landfill!";
+                input.placeholder = "e.g. Old AA batteries";
                 input.style.display = "block";
                 btnText.innerText = "Sort Waste!";
             } else {
+                hint.innerText = "Get a simple daily mission to help the planet!";
                 input.style.display = "none";
                 btnText.innerText = "Get Daily Challenge!";
             }
